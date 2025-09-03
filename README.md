@@ -10,10 +10,10 @@ In computational research, especially when using notebooks (e.g., Jupyter), it i
 
 ```mermaid
 flowchart TD
-    A[Create YAML Config File] --> B[Load Config in Notebook / Scripts]
+    A[Create YAML Config_'version' File] --> B[Load Config in Notebook / Scripts]
     B --> C[Run Experiment / Simulation]
-    C --> D[Save Results &#40;Data, Figures&#41; with Metadata]
-    D --> E[Reproduce / Cross-validate Results]
+    C --> D[Save Results &#40;Data, Figures&#41; with 'version' Prefix]
+    D --> E[Reproduce / Cross-validate Results using 'version' Config]
 ```
 
 ## Features / Why use this?
