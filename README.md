@@ -58,34 +58,6 @@ exp:
 - **Python Example**: See the `python-example` folder for a complete example using Python with `libroadrunner` and `antimony`
 - **Julia Example**: See the `julia-example` folder for a complete example using Julia with `DifferentialEquations.jl` and `SBML.jl`
 
-### Folder Structure
-
-```
-reproducible-scientific-notebook-configurations/
-├── .env
-├── juliaexample/
-│   ├── Manifest.toml
-│   ├── Project.toml
-│   └── src/
-│       ├── ConfigManager.jl
-│       ├── lotka-volterra.xml
-│       └── my-notebook.ipynb
-├── project-data/
-│   └── my-simulation/
-│       ├── config_v1.yml 
-│       ├── data/
-│       │   ├── v1_simulation_results_julia.csv
-│       │   └── v1_simulation_results_python.csv
-│       └── figures/
-│           ├── v1_simulation_plot_julia.png
-│           └── v1_simulation_plot_python.png
-└── python-example/
-    └── notebooks/
-        ├── config_manager.py
-        ├── lotka-volterra.xml
-        ├── my-notebook.ipynb
-```
-
 ### Example Code Snippet (Julia)
 
 Initialize configuration
@@ -124,6 +96,33 @@ loaded_config = load_configs(folder_name="my-simulation", config_suffix="v1") # 
 print_config(loaded_config)
 ```
 
+### Folder Structure
+
+```
+reproducible-scientific-notebook-configurations/
+├── .env
+├── juliaexample/
+│   ├── Manifest.toml
+│   ├── Project.toml
+│   └── src/
+│       ├── ConfigManager.jl
+│       ├── lotka-volterra.xml
+│       └── my-notebook.ipynb
+├── project-data/
+│   └── my-simulation/
+│       ├── config_v1.yml 
+│       ├── data/
+│       │   ├── v1_simulation_results_julia.csv
+│       │   └── v1_simulation_results_python.csv
+│       └── figures/
+│           ├── v1_simulation_plot_julia.png
+│           └── v1_simulation_plot_python.png
+└── python-example/
+    └── notebooks/
+        ├── config_manager.py
+        ├── lotka-volterra.xml
+        ├── my-notebook.ipynb
+```
 
 ## Contributing
 
