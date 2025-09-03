@@ -133,17 +133,6 @@ Contributions are welcome! Please fork the repository and submit a pull request 
 
 This project is licensed under the MIT License.
 
-## Citation 
+## Citation
 
-If this framework was helpful in your research, please consider citing it as follows:
-
-```bibtex
-@misc{YunduoLan2025,
-  author = {Yunduo Lan},
-  title = {Reproducible Scientific Notebooks through YAML},
-  year = {2025},
-  publisher = {GitHub}, 
-  journal = {GitHub repository},
-  howpublished = {\url{https://github.com/AnEvilBurrito/reproducible-scientific-notebook-template}},
-}
-```
+If you found this project useful, a simple mention e.g. "reproducible-scientific-notebook-template (github.com/AnEvilBurrito/reproducible-scientific-notebook-template)" would be greatly appreciated. 
