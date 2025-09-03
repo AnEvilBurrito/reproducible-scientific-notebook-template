@@ -6,7 +6,7 @@ import pickle
 import pandas as pd
 
 dotenv.load_dotenv()
-new_path = os.getenv("NEW_DATA_PATH")
+new_path = os.getenv("DATA_PATH")
 
 def load_configs(folder_name: str, config_suffix: str = "v1") -> dict:
     config_path = os.path.join(new_path, folder_name, f"config_{config_suffix}.yml")
