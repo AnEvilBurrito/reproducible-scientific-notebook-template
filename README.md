@@ -66,14 +66,23 @@ Initialize configuration
 using YAML
 # import Functions from configmanager 
 include("ConfigManager.jl")
+# This will create the folder structure under {DATA_PATH}/my-simulation if it doesn't already exist
 ConfigManager.initialise_config("my-simulation", verbose=1)
 ```
 
 Loading and printing configuration
 
 ```julia
+# Load the configuration (specify folder name and optional suffix)
+# default suffix is "v1"
 config = ConfigManager.load_configs("my-simulation", "v1")
 ConfigManager.print_config(config)
+```
+
+Saving Data
+```julia
+# This will automatically save the data as {DATA_PATH}/my-simulation/data/v1_simulation_results_julia.csv
+ConfigManager.save_data(notebook_config, df, "simulation_results", data_format="csv", verbose=1)
 ```
 
 ### Example Code Snippet (Python)
@@ -94,6 +103,20 @@ from config_manager import load_configs, print_config
 # Load the configuration (specify folder name and optional suffix)
 loaded_config = load_configs(folder_name="my-simulation", config_suffix="v1") # default suffix is "v1"
 print_config(loaded_config)
+```
+
+Saving Data
+
+```python
+from config_manager import save_data
+import pandas as pd
+result_df = pd.DataFrame(result, columns=rr.timeCourseSelections)
+save_data(
+    notebook_config=loaded_config["notebook"],
+    data=result_df,
+    data_name="simulation_results_python",
+    data_format="csv",
+)
 ```
 
 ### Using Another Config File 
