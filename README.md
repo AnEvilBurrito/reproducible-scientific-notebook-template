@@ -1,4 +1,4 @@
-# reproducible-scientific-notebook-configurations
+# Reproducible Scientific Notebooks through YAML
 
 This is a lightweight framework for enforcing reproducibility and organization in data-driven academic research by leveraging structured YAML configuration files.
 
@@ -9,7 +9,7 @@ In computational research, especially when using notebooks (e.g., Jupyter), it i
 ## Overview 
 
 ```mermaid
-flowchart LR
+flowchart TD
     A[Create YAML Config File] --> B[Load Config in Notebook]
     B --> C[Run Experiment / Simulation]
     C --> D[Save Results &#40;Data, Figures&#41; with Metadata]
