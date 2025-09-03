@@ -49,7 +49,7 @@ exp:
 1. **Install Dependencies**: Ensure you have a YAML parser for your programming language (e.g., PyYAML for Python, YAML.jl for Julia)
 2. **Create a Configuration File**: Define your experiment parameters in a `.yaml` file
 3. **Create a .env File**: Define the `DATA_PATH` variable in a `.env` file to specify where your project data (configurations, results, figures) will be stored. You can use the provided `.env.example` as a template.
-3. **Load and Validate Config**: Use the provided utilities to load and validate your configuration, alternatively, you can implement your own configuration management 
+3. **Load and Validate Config**: Use the provided utilities to load and validate your configuration by following the examge usage below
 
 ## Example Usage
 
