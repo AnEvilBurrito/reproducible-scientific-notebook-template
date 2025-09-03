@@ -58,7 +58,72 @@ exp:
 - **Python Example**: See the `python-example` folder for a complete example using Python with `libroadrunner` and `antimony`
 - **Julia Example**: See the `julia-example` folder for a complete example using Julia with `DifferentialEquations.jl` and `SBML.jl`
 
-## Folder Structure
+### Folder Structure
+
+```
+reproducible-scientific-notebook-configurations/
+├── .env
+├── juliaexample/
+│   ├── Manifest.toml
+│   ├── Project.toml
+│   └── src/
+│       ├── ConfigManager.jl
+│       ├── lotka-volterra.xml
+│       └── my-notebook.ipynb
+├── project-data/
+│   └── my-simulation/
+│       ├── config_v1.yml 
+│       ├── data/
+│       │   ├── v1_simulation_results_julia.csv
+│       │   └── v1_simulation_results_python.csv
+│       └── figures/
+│           ├── v1_simulation_plot_julia.png
+│           └── v1_simulation_plot_python.png
+└── python-example/
+    └── notebooks/
+        ├── config_manager.py
+        ├── lotka-volterra.xml
+        ├── my-notebook.ipynb
+```
+
+### Example Code Snippet (Julia)
+
+Initialize configuration
+
+```julia
+using YAML
+# import Functions from configmanager 
+include("ConfigManager.jl")
+ConfigManager.initialise_config("my-simulation", verbose=1)
+```
+
+Loading and printing configuration
+
+```julia
+config = ConfigManager.load_configs("my-simulation", "v1")
+ConfigManager.print_config(config)
+```
+
+### Example Code Snippet (Python)
+
+Initialize configuration
+
+```python
+from config_manager import initialise_config
+
+initialise_config(folder_name="my-simulation", verbose=1)
+```
+
+Loading and printing configuration
+
+```python 
+from config_manager import load_configs, print_config
+
+# Load the configuration (specify folder name and optional suffix)
+loaded_config = load_configs(folder_name="my-simulation", config_suffix="v1") # default suffix is "v1"
+print_config(loaded_config)
+```
+
 
 ## Contributing
 
@@ -66,5 +131,19 @@ Contributions are welcome! Please fork the repository and submit a pull request 
 
 ## License
 
-This project is licensed under the MIT License. 
-    
+This project is licensed under the MIT License.
+
+## Citation 
+
+If this framework was helpful in your research, please consider citing it as follows:
+
+```bibtex
+@misc{AnEvilBurrito2024reproducible,
+  author = {AnEvilBurrito},
+  title = {Reproducible Scientific Notebooks through YAML},
+  year = {2024},
+  publisher = {GitHub}, 
+  journal = {GitHub repository},
+  howpublished = {\url{https://github.com/AnEvilBurrito/reproducible-scientific-notebook-template}},
+}
+```
