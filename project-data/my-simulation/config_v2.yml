@@ -1,0 +1,11 @@
+notebook:
+  version: "v2" # Unique ID for this experiment, idiomatically this should be identical to the config_{suffix}
+  name: "my-simulation" # Notebook data folder
+  desc: "Simulate and capture the results of ODE models in SBML format with less steps and earlier stop"
+
+exp:
+  model: "lotka-volterra.xml"
+  simulation:
+    start: 0
+    stop: 500
+    step: 50   

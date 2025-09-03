@@ -30,10 +30,10 @@ YAML strikes the perfect balance between human readability and machine parsing. 
 
 example YAML configuration:
 ```yaml
-# config.yml
+# config_v1.yml
 notebook:
-  id: "my-notebook" # Unique ID for this experiment
-  name: "Model simulation"
+  version: "v1" # Unique ID for this experiment, idiomatically this should be identical to the config_{suffix}
+  name: "my-simulation" # Notebook data folder
   desc: "Simulate and capture the results of ODE models in SBML format"
 
 exp:
@@ -41,7 +41,7 @@ exp:
   simulation:
     start: 0
     stop: 1000
-    step: 100      
+    step: 100        
 ```
 
 ## Getting Started
@@ -94,6 +94,18 @@ from config_manager import load_configs, print_config
 # Load the configuration (specify folder name and optional suffix)
 loaded_config = load_configs(folder_name="my-simulation", config_suffix="v1") # default suffix is "v1"
 print_config(loaded_config)
+```
+
+### Using Another Config File 
+
+To use a different configuration file, simply change the `config_suffix` parameter when loading the configuration. For example, to use `config_v2.yml`, you would do:
+
+```python
+loaded_config = load_configs(folder_name="my-simulation", config_suffix="v2")
+```
+
+```julia
+config = ConfigManager.load_configs("my-simulation", "v2")
 ```
 
 ### Folder Structure
