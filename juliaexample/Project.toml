@@ -1,0 +1,14 @@
+name = "juliaexample"
+uuid = "7babb2a1-1f65-4a82-bf24-bb7cb9f8f019"
+authors = ["Dawson Lan <47137689+AnEvilBurrito@users.noreply.github.com>"]
+version = "0.1.0"
+
+[deps]
+OrdinaryDiffEq = "1dea7af3-3e70-54e6-95c3-0bf5283fa5ed"
+SBML = "e5567a89-2604-4b09-9718-f5f78e97c3bb"
+YAML = "ddb6d928-2868-570f-bddf-ab3f9cf99eb6"
+
+[compat]
+OrdinaryDiffEq = "6.102.0"
+SBML = "1.6.0"
+YAML = "0.4.14"

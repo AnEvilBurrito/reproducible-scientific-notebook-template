@@ -5,6 +5,8 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
+    "antimony>=3.0.0",
+    "libroadrunner>=2.8.0",
     "matplotlib>=3.10.6",
     "pandas>=2.3.2",
     "python-dotenv>=1.1.1",
