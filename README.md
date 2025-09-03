@@ -138,10 +138,10 @@ This project is licensed under the MIT License.
 If this framework was helpful in your research, please consider citing it as follows:
 
 ```bibtex
-@misc{AnEvilBurrito2024reproducible,
-  author = {AnEvilBurrito},
+@misc{YunduoLan2025,
+  author = {Yunduo Lan},
   title = {Reproducible Scientific Notebooks through YAML},
-  year = {2024},
+  year = {2025},
   publisher = {GitHub}, 
   journal = {GitHub repository},
   howpublished = {\url{https://github.com/AnEvilBurrito/reproducible-scientific-notebook-template}},
