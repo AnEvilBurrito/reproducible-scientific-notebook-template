@@ -81,6 +81,7 @@ ConfigManager.print_config(config)
 
 Saving Data
 ```julia
+notebook_config = config["notebook"]
 # This will automatically save the data as {DATA_PATH}/my-simulation/data/v1_simulation_results_julia.csv
 ConfigManager.save_data(notebook_config, df, "simulation_results", data_format="csv", verbose=1)
 ```
